@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsFillTrashFill } from "@react-icons/all-files/bs/BsFillTrashFill";
 
 function App() {
@@ -15,6 +15,10 @@ function App() {
     });
     setTodoes(newArr);
   };
+
+  useEffect(() => {
+    console.log("salam");
+  }, [todo]);
 
   return (
     <div className="justify-center flex mt-60 flex-col mx-8">
